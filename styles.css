@@ -1,0 +1,20 @@
+/* Error: There's already a module with namespace "base".
+ *     ,
+ * 1   | @use "base";
+ *     | =========== original @use
+ * ... |
+ * 4   | @use "base";
+ *     | ^^^^^^^^^^^ new @use
+ *     '
+ *   styles\styles.scss 4:1  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: There's already a module with namespace \"base\".\a     \2577 \a 1   \2502  @use \"base\";\d\a     \2502  \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  original @use\a... \2502 \a 4   \2502  @use \"base\";\a     \2502  ^^^^^^^^^^^ new @use\a     \2575 \a   styles\\styles.scss 4:1  root stylesheet";
+}
