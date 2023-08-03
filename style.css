@@ -188,19 +188,14 @@ section .content .container-card .card2 p {
   padding-bottom: 16px;
 }
 section .content .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
 }
-section .content .btn .btn-more {
+section .content .btn-more {
   min-width: 100%;
   padding: 20px;
   background-color: #292E3D;
   color: #FFFFFF;
   font-size: 1.125rem;
-}
-section .content .btn .hidden, section .content .btn .btn-hidden {
-  display: none !important;
 }
 
 @media screen and (min-width: 900px) {
@@ -214,37 +209,39 @@ section .content .btn .hidden, section .content .btn .btn-hidden {
   .content .aside {
     display: flex !important;
   }
-  .content .container-card {
+  .content .container-card-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .content .container-card-btn .container-card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    padding-bottom: 32px;
   }
-  .content .container-card .card2 {
+  .content .container-card-btn .container-card .card2 {
     gap: 12px;
   }
-  .content .container-card .card2 img {
+  .content .container-card-btn .container-card .card2 img {
     object-fit: fill;
     max-width: 100%;
   }
-  .content .container-card .btn {
-    display: flex !important;
-  }
-  .content .btn-more {
+  .content .container-card-btn .btn-more {
     display: none;
   }
-  .content .btn-hidden {
-    min-width: 332px;
-    padding: 20px;
+  .content .container-card-btn .btn-active {
+    color: #2947A9;
+  }
+  .content .container-card-btn .btn {
+    display: flex !important;
+    align-items: center;
+    gap: 9px;
+  }
+  .content .container-card-btn .btn .btn-hidden {
     background-color: #292E3D;
     color: #FFFFFF;
-    font-size: 1.125rem;
-  }
-  .content .hidden {
-    color: #E0E3EB;
-  }
-  .content .btn-active {
-    color: #2947A9;
+    padding: 20px;
   }
 }
 

@@ -108,19 +108,15 @@ section {
         }
 
         .btn{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .btn-more {
-                min-width: 100%;
-                padding: 20px;
-                background-color: #292E3D;
-                color: #FFFFFF;
-                font-size: 1.125rem;
-            }
-            .hidden, .btn-hidden{
-                display: none !important;
-            }
+            display: none;
+        }
+
+        .btn-more {
+            min-width: 100%;
+            padding: 20px;
+            background-color: #292E3D;
+            color: #FFFFFF;
+            font-size: 1.125rem;
         }
     }
     
@@ -141,45 +137,50 @@ section {
             display: flex !important;
         }
 
-        .container-card{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            padding-bottom: 32px;
-            .card2{
-                gap: 12px;
+        .container-card-btn{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-                img {
-                    object-fit: fill;
-                    max-width: 100%;
+            .container-card{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+
+                .card2{
+                    gap: 12px;
+
+                    img {
+                        object-fit: fill;
+                        max-width: 100%;
+                    }
                 }
+                
             }
+
+            .btn-more {
+                display: none;
+            }
+
+            .btn-active {
+                color: #2947A9;
+            }
+
             .btn{
                 display: flex !important;
+                align-items: center;
+                gap: 9px;
+               
+                .btn-hidden {
+                    background-color: #292E3D;
+                    color: #FFFFFF;
+                    padding: 20px;
+
+                }
             }
-    
-           
         }
-
-        .btn-more {
-            display: none;
-        }
-
-        .btn-hidden {
-            min-width: 332px;
-            padding: 20px;
-            background-color: #292E3D;
-            color: #FFFFFF;
-            font-size: 1.125rem;
-        }
-
-        .hidden{
-            color: #E0E3EB;
-        }
-
-        .btn-active {
-            color: #2947A9;
-        }
+ 
     }
 
     
