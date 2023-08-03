@@ -7,7 +7,7 @@
     max-width: 332px;
 
     gap: 18px;
-    margin-bottom: 30px;
+    margin: 30px 0;
     padding: 20px;
     border-radius: 4px;
     border: solid 1px #E0E3EB;
@@ -15,7 +15,6 @@
 
     img{
         max-width: 40px;
-        max: height 40px;
-
+        max-height: 40px;
     }
 }

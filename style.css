@@ -83,6 +83,19 @@ p {
 .container {
   margin: 20px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .header h1, .header h2 {
@@ -98,14 +111,14 @@ p {
   min-width: 200px;
   max-width: 332px;
   gap: 18px;
-  margin-bottom: 30px;
+  margin: 30px 0;
   padding: 20px;
   border-radius: 4px;
   border: solid 1px #E0E3EB;
 }
 .card img {
   max-width: 40px;
-  max: height 40px;
+  max-height: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
