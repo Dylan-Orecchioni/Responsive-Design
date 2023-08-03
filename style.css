@@ -85,7 +85,8 @@ button {
 }
 
 .container {
-  margin: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 20px;
 }
 
@@ -100,11 +101,12 @@ button {
   justify-content: space-around;
   align-items: center;
   gap: 20px;
+  width: 100%;
 }
 .containerCard .card {
   display: flex;
   flex-direction: column;
-  max-width: 332px;
+  width: 80%;
   gap: 18px;
   padding: 20px;
   border-radius: 4px;
@@ -202,6 +204,9 @@ section .content .btn-more {
   .containerCard {
     flex-direction: row;
   }
+  .containerCard .card {
+    max-width: 332px;
+  }
   .content {
     flex-direction: row;
     justify-content: space-between !important;
@@ -231,17 +236,22 @@ section .content .btn-more {
     display: none;
   }
   .content .container-card-btn .btn-active {
-    color: #2947A9;
+    color: #2947A9 !important;
+  }
+  .content .container-card-btn .hidden {
+    color: #E0E3EB;
   }
   .content .container-card-btn .btn {
     display: flex !important;
     align-items: center;
     gap: 9px;
+    width: 100%;
   }
   .content .container-card-btn .btn .btn-hidden {
     background-color: #292E3D;
     color: #FFFFFF;
     padding: 20px;
+    width: 100%;
   }
 }
 

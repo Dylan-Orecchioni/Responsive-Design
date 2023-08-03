@@ -4,11 +4,12 @@
     justify-content: space-around;
     align-items: center;
     gap: 20px;
+    width: 100%;
 
     .card {
         display: flex;
         flex-direction: column;
-        max-width: 332px;
+        width: 80%;
 
         gap: 18px;
         padding: 20px;
@@ -127,6 +128,10 @@ section {
 @media screen and (min-width: 900px) {
     .containerCard{
         flex-direction: row;
+
+        .card{
+            max-width: 332px;
+        }
     }
     
     .content{
@@ -164,19 +169,23 @@ section {
             }
 
             .btn-active {
-                color: #2947A9;
+                color: #2947A9 !important;
+            }
+
+            .hidden {
+                color: #E0E3EB;
             }
 
             .btn{
                 display: flex !important;
                 align-items: center;
                 gap: 9px;
-               
+                width: 100%;
                 .btn-hidden {
                     background-color: #292E3D;
                     color: #FFFFFF;
                     padding: 20px;
-
+                    width: 100%;
                 }
             }
         }
