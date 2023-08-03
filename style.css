@@ -87,32 +87,25 @@ button {
 .container {
   margin: 20px;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .header h1, .header h2 {
   text-align: center;
-  margin: 15px;
+  margin: 30px;
 }
 
 .containerCard {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 20px;
 }
 .containerCard .card {
   display: flex;
   flex-direction: column;
-  align-content: flex-start;
-  justify-content: flex-start;
   max-width: 332px;
   gap: 18px;
-  margin: 30px 0;
   padding: 20px;
   border-radius: 4px;
   border: solid 1px #E0E3EB;
@@ -122,15 +115,37 @@ button {
   max-height: 40px;
 }
 
-section {
-  margin: 30px 0;
+.debug1 {
+  border: solid 3px red;
+  padding: 5px;
 }
+
+.debug2 {
+  border: solid 3px blue;
+  padding: 5px;
+}
+
+.debug3 {
+  border: solid 3px green;
+  padding: 5px;
+}
+
+.debug4 {
+  border: solid 3px orange;
+  padding: 5px;
+}
+
+.debug5 {
+  border: solid 3px purple;
+  padding: 5px;
+}
+
 section .aside {
   display: none;
   flex-direction: column;
   align-content: center;
-  justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 section .aside nav h2 {
   font-size: 2.25rem;
@@ -153,78 +168,83 @@ section .aside nav ul .active {
   color: #2947A9;
   border-left: 4px solid;
 }
-section .container-card .card2 {
+section .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+section .content .container-card .card2 {
   display: flex;
   flex-direction: column;
-  align-content: flex-end;
-  justify-content: flex-end;
-  gap: 12px;
-  margin: 30px 0;
   background-color: #2947A9;
+  gap: 12px;
+  margin-bottom: 12px;
 }
-section .container-card .card2 h3, section .container-card .card2 p {
+section .content .container-card .card2 h3, section .content .container-card .card2 p {
   padding-left: 12px;
   color: #FFFFFF;
 }
-section .container-card .card2 p {
+section .content .container-card .card2 p {
   padding-bottom: 16px;
 }
-section .container-card .btn-more {
-  min-width: 332px;
+section .content .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .content .btn .btn-more {
+  min-width: 100%;
   padding: 20px;
   background-color: #292E3D;
   color: #FFFFFF;
   font-size: 1.125rem;
 }
-section .container-card .btn {
-  display: none;
+section .content .btn .hidden, section .content .btn .btn-hidden {
+  display: none !important;
 }
 
 @media screen and (min-width: 900px) {
   .containerCard {
     flex-direction: row;
   }
-  .container-card {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+  .content {
+    flex-direction: row;
+    justify-content: space-between !important;
   }
-  .container-card .card2 {
-    grid-column: 2;
-    justify-self: center;
-    min-width: 220px;
-    max-width: 356px;
-  }
-  .container-card .col-3 {
-    grid-column: 3;
-  }
-  .container-card .aside {
-    display: flex;
-  }
-  .container-card .btn {
+  .content .aside {
     display: flex !important;
-    justify-self: center;
-    align-items: center;
-    grid-column: 2/span 3;
-    gap: 18px;
-    font-size: 1.125rem;
   }
-  .container-card .btn .fas {
-    color: #F6F8F7;
+  .content .container-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding-bottom: 32px;
   }
-  .container-card .btn .btn-active {
-    color: #2947A9;
+  .content .container-card .card2 {
+    gap: 12px;
   }
-  .container-card .btn-hidden {
-    grid-column: 2/span 3;
-    min-width: 280px;
+  .content .container-card .card2 img {
+    object-fit: fill;
+    max-width: 100%;
+  }
+  .content .container-card .btn {
+    display: flex !important;
+  }
+  .content .btn-more {
+    display: none;
+  }
+  .content .btn-hidden {
+    min-width: 332px;
     padding: 20px;
     background-color: #292E3D;
     color: #FFFFFF;
     font-size: 1.125rem;
   }
-  .container-card .btn-more {
-    display: none;
+  .content .hidden {
+    color: #E0E3EB;
+  }
+  .content .btn-active {
+    color: #2947A9;
   }
 }
 

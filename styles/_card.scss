@@ -1,23 +1,19 @@
 .containerCard {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 20px;
 
     .card {
         display: flex;
         flex-direction: column;
-        align-content: flex-start;
-        justify-content: flex-start;
         max-width: 332px;
 
         gap: 18px;
-        margin: 30px 0;
         padding: 20px;
         border-radius: 4px;
         border: solid 1px #E0E3EB;
-    
     
         img{
             max-width: 40px;
@@ -26,17 +22,38 @@
     }
 }
 
+.debug1{
+    border: solid 3px red;
+    padding: 5px;
+}
+.debug2{
+    border: solid 3px blue;
+    padding: 5px;
+
+}
+.debug3{
+    border: solid 3px green;
+    padding: 5px;
+
+}
+.debug4{
+    border: solid 3px orange;
+    padding: 5px;
+
+}
+.debug5{
+    border: solid 3px purple;
+    padding: 5px;
+
+}
 
 section {
-    margin: 30px 0;
-
     .aside{
         display: none;
         flex-direction: column;
         align-content: center;
-        justify-content: center;
         align-items: center;
-
+        padding: 20px;
         nav{
 
             h2{
@@ -66,29 +83,89 @@ section {
         }
     }
 
-    .container-card{
-        .card2 {
-            display: flex;
-            flex-direction: column;
-            align-content: flex-end;
-            justify-content: flex-end;
-    
-            gap: 12px;
-            margin: 30px 0;
-    
-            background-color: #2947A9;
-            
-            h3,p {
-                padding-left: 12px;
-                color: #FFFFFF;
+    .content {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        .container-card{
+
+            .card2 {
+                display: flex;
+                flex-direction: column;
+                background-color: #2947A9;
+                gap: 12px;
+                margin-bottom: 12px;
+                h3,p {
+                    padding-left: 12px;
+                    color: #FFFFFF;
+                }
+        
+                p{
+                    padding-bottom: 16px;
+                }
             }
-    
-            p{
-                padding-bottom: 16px;
+            
+        }
+
+        .btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .btn-more {
+                min-width: 100%;
+                padding: 20px;
+                background-color: #292E3D;
+                color: #FFFFFF;
+                font-size: 1.125rem;
+            }
+            .hidden, .btn-hidden{
+                display: none !important;
             }
         }
+    }
     
+
+}   
+
+    
+@media screen and (min-width: 900px) {
+    .containerCard{
+        flex-direction: row;
+    }
+    
+    .content{
+        flex-direction: row;
+        justify-content: space-between !important;
+
+        .aside {
+            display: flex !important;
+        }
+
+        .container-card{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            padding-bottom: 32px;
+            .card2{
+                gap: 12px;
+
+                img {
+                    object-fit: fill;
+                    max-width: 100%;
+                }
+            }
+            .btn{
+                display: flex !important;
+            }
+    
+           
+        }
+
         .btn-more {
+            display: none;
+        }
+
+        .btn-hidden {
             min-width: 332px;
             padding: 20px;
             background-color: #292E3D;
@@ -96,73 +173,14 @@ section {
             font-size: 1.125rem;
         }
 
-        .btn {
-            display: none;
+        .hidden{
+            color: #E0E3EB;
         }
 
-    }
-
-}
-
-    
-@media screen and (min-width: 900px) {
-    .containerCard{
-        flex-direction: row;
-    }
-
-    .container-card {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);  
-        gap: 30px; 
-        
-        .card2 {
-            grid-column: 2;
-            justify-self: center;
-            min-width: 220px;
-            max-width: 356px;
-        }
-
-        .col-3 {
-            grid-column: 3;
-        }
-
-        .aside{
-            display: flex;
-        }
-
-        .btn {
-            display: flex !important;
-            justify-self: center;
-            align-items: center;
-            grid-column: 2 / span 3;
-
-            gap: 18px;
-            font-size: 1.125rem;
-
-            .fas{
-                color: #F6F8F7;
-            }
-
-            .btn-active {
-                color: #2947A9;
-            }
-        
-        }
-
-        .btn-hidden {
-            grid-column: 2 / span 3;
-            min-width: 280px;
-            padding: 20px;
-            background-color: #292E3D;
-            color: #FFFFFF;
-            font-size: 1.125rem;
-        }
-
-        .btn-more {
-            display: none;
+        .btn-active {
+            color: #2947A9;
         }
     }
 
-    
     
 }
