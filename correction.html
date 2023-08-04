@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours Html / CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="container container-l">
+                <img src="./images/logo.png" alt="">
+                <nav class="nav">
+                    <div class="nav-burger"></div>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="hero">
+            <div class="hero-background">
+                <picture>
+                    <source srcset="./images/hero-mobile.png" media="(max-width: 600px)">
+                    <source srcset="./images/hero-desktop.png" media="(min-width: 601px)">
+                    <img src="./images/hero-mobile.png" alt="Un building">
+                </picture>
+            </div>
+            <div class="container container-m">
+                <h1 class="title">Building things is our mission.</h1>
+                <div class="features">
+                    <p>Feature Projects</p>
+                    <p>The National University of Architecture</p>
+                    <div>
+                        <a href="#">Back</a>
+                        <a href="#">Next</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

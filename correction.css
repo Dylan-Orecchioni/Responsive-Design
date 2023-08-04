@@ -1,0 +1,118 @@
+body {
+    font-family: sans-serif;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 780px) {
+    .title {
+        font-size: 4.875rem;
+        max-width: 570px;
+    }
+}
+
+
+
+
+
+
+
+
+
+.container {
+    margin: 0 auto;
+    padding: 0 29px;
+}
+.container-l {
+    max-width: 1500px;
+}
+.container-m {
+    max-width: 1125px;
+}
+
+.header {
+    .navbar {
+        ul {
+            display: none;
+        }
+
+        .nav-burger {
+            height: 3px;
+            width: 30px;
+            border-radius: 5px;
+            background-color: #667299;
+        }
+
+        .nav-burger:before {
+            content: '';
+            display: inline-block;
+            height: 3px;
+            width: 30px;
+            border-radius: 5px;
+            background-color: #667299;
+        }
+
+        .container {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .hero {
+        position: relative;
+        height: calc(100vh - 80px);
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        } 
+        .container {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            .features {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .header .navbar {
+        ul {
+            display: block;
+            display: flex;
+
+            li {
+                margin-left: 50px;
+            }
+        }
+        .nav-burger {
+            display: none;
+        }
+    }
+    .header .hero .container .features {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 20px;
+        background-color: blue;
+        color: #FFF;
+    }
+}
