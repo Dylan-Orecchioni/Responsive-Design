@@ -124,6 +124,87 @@ section {
 
 }   
 
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 29px;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 30px;
+
+    h2,p{
+        text-align: center;
+        padding: 0px 20px;
+    }
+
+    p{
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            input,select{
+                line-height: 21.11px;
+                border: 1px solid #e0e3eb;
+                border-radius: 4px;
+                padding: 10px;
+                font-family: 'Work Sans', sans-serif;
+                font-size: 1.25rem;
+                color: #A3AAC2;
+            }
+
+            input::placeholder{
+                color: #A3AAC2;
+            }
+        }
+
+        .file-input,textarea{
+            border: 1px solid #e0e3eb;
+            border-radius: 4px;
+            padding: 10px;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1.25rem;
+            color: #A3AAC2;
+        }
+
+        textarea::placeholder{
+            color: #A3AAC2;
+        }
+
+        p{
+            align-self: flex-start;
+            font-size: 1rem;
+            span{
+                color: red;
+            }
+        }
+
+        button{
+            background-color: #2947a9;
+            color: white;
+            font-weight: 600;
+            padding: 15px;
+            align-self: center;
+            max-width: 271px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 1.25rem  ;
+        }
+    }
+}
+
+
     
 @media screen and (min-width: 900px) {
     .containerCard{
@@ -131,12 +212,13 @@ section {
 
         .card{
             max-width: 332px;
+            overflow: auto;
         }
     }
     
     .content{
         flex-direction: row;
-        justify-content: space-between !important;
+        justify-content: space-around !important;
 
         .aside {
             display: flex !important;
@@ -192,5 +274,13 @@ section {
  
     }
 
-    
+    #form {
+        max-width: 800px;
+       form{
+            fieldset{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+       }
+    }
 }
