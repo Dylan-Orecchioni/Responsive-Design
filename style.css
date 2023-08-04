@@ -206,7 +206,6 @@ section .content .btn-more {
   align-items: center;
   justify-content: center;
   gap: 29px;
-  width: 100%;
   padding-top: 100px;
   padding-bottom: 30px;
 }
@@ -271,6 +270,38 @@ section .content .btn-more {
   font-size: 1.25rem;
 }
 
+#homepage header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+#homepage header .nav-collapse {
+  display: none;
+}
+#homepage header .fa-bars {
+  color: #667299;
+  font-size: 2rem;
+}
+#homepage .banner {
+  background-image: url("./uploads/hero-mobile.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#homepage .banner h1 {
+  display: block;
+  z-index: 1;
+  text-align: center;
+  max-width: 60%;
+  text-align: justify;
+}
+
 @media screen and (min-width: 900px) {
   .containerCard {
     flex-direction: row;
@@ -331,6 +362,9 @@ section .content .btn-more {
   #form form fieldset {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+  #homepage {
+    display: flex;
   }
 }
 
